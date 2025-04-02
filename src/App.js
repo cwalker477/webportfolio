@@ -25,11 +25,11 @@ function App() {
 						<Routes>
 							<Route path="/" element={<Home />} />
 							<Route path="projects" element={<Projects />} />
+							{/* Changed route to accept dynamic projectId */}
 							<Route
-								path="projects/single-project"
+								path="projects/:projectId" 
 								element={<ProjectSingle />}
 							/>
-
 							<Route path="about" element={<About />} />
 							<Route path="contact" element={<Contact />} />
 						</Routes>
