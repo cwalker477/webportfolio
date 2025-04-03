@@ -5,7 +5,8 @@ import useThemeSwitcher from '../../hooks/useThemeSwitcher';
 import { motion } from 'framer-motion';
 import Button from '../reusable/Button'; // Import Button component
 import Lottie from 'lottie-react'; // Import Lottie
-import animationData from '../../images/Animation_1743641712181.json'; // Import animation data
+// Corrected import path for animation data
+import animationData from '../../images/Animation_1743641712181.json'; 
 
 // Accept showHireMeModal prop
 const AppBanner = ({ showHireMeModal }) => { 
