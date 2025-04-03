@@ -86,17 +86,8 @@ const ProjectInfo = () => {
 					</div>
 				)}
 
-				{/* Social sharing - Commented out as it was hardcoded */}
-				{/* 
-				<div>
-					<p className="font-general-regular text-2xl font-semibold text-text-light-secondary dark:text-text-dark-secondary mb-2"> {/* Updated text */}
-						Share This
-					</p>
-					<div className="flex items-center gap-3 mt-5">
-						{ Add dynamic social sharing logic if needed }
-					</div>
-				</div> 
-				*/}
+				{/* Social sharing block completely removed */}
+				
 			</div>
 
 			{/* Right Section: Project Challenge/Details */}
