@@ -1,9 +1,11 @@
 import useThemeSwitcher from '../../hooks/useThemeSwitcher';
 // Removed FiArrowDownCircle import
-import developerLight from '../../images/developer.svg';
-import developerDark from '../../images/developer-dark.svg';
+// Removed SVG imports: import developerLight from '../../images/developer.svg';
+// Removed SVG imports: import developerDark from '../../images/developer-dark.svg';
 import { motion } from 'framer-motion';
 import Button from '../reusable/Button'; // Import Button component
+import Lottie from 'lottie-react'; // Import Lottie
+import animationData from '../../images/Animation_1743641712181.json'; // Import animation data
 
 // Accept showHireMeModal prop
 const AppBanner = ({ showHireMeModal }) => { 
@@ -69,12 +71,8 @@ const AppBanner = ({ showHireMeModal }) => {
 				transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.2 }}
 				className="w-full sm:w-2/3 text-right float-right mt-8 sm:mt-0"
 			>
-				<img
-					src={
-						activeTheme === 'dark' ? developerLight : developerDark
-					}
-					alt="Developer"
-				/>
+        {/* Replace img with Lottie component */}
+				<Lottie animationData={animationData} loop={true} /> 
 			</motion.div>
 		</motion.section>
 	);
