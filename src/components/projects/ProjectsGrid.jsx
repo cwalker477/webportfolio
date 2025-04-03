@@ -18,7 +18,7 @@ const ProjectsGrid = () => {
 	return (
 		<section className="py-5 sm:py-10 mt-5 sm:mt-10">
 			<div className="text-center">
-				<p className="font-general-medium text-2xl sm:text-4xl mb-1 text-text-light-secondary dark:text-text-dark-secondary"> {/* Updated text */}
+				<p className="font-general-medium text-2xl sm:text-4xl mb-1 text-gray-500 dark:text-gray-300"> {/* Use standard Tailwind text colors */}
 					Projects portfolio
 				</p>
 			</div>
@@ -26,8 +26,8 @@ const ProjectsGrid = () => {
 			<div className="mt-10 sm:mt-16">
 				<h3
 					className="font-general-regular 
-                        text-center text-text-light-secondary // Updated text
-                        dark:text-text-dark-secondary // Updated text
+                        text-center text-gray-500 // Use standard Tailwind text colors
+                        dark:text-gray-300 // Use standard Tailwind text colors
                         text-md
                         sm:text-xl
                         mb-3
@@ -39,8 +39,8 @@ const ProjectsGrid = () => {
 					className="
                         flex
                         justify-between
-                        border-b border-palette-gray // Updated border
-                        dark:border-surface-dark // Updated border
+                        border-b border-gray-200 // Use standard Tailwind border color
+                        dark:border-gray-700 // Use standard Tailwind border color
                         pb-3
                         gap-3
                         "
@@ -58,7 +58,7 @@ const ProjectsGrid = () => {
                                 cursor-pointer
                                 "
 						>
-							<FiSearch className="text-text-light-secondary dark:text-text-dark-secondary w-5 h-5"></FiSearch> {/* Updated text */}
+							<FiSearch className="text-gray-400 dark:text-gray-300 w-5 h-5"></FiSearch> {/* Use standard Tailwind text colors */}
 						</span>
 						<input
 							onChange={(e) => {
@@ -70,15 +70,15 @@ const ProjectsGrid = () => {
                                 sm:px-4
                                 py-2
                                 border 
-                            border-gray-200
-                                dark:border-surface-dark // Updated border
+                                border-gray-200 // Light mode border
+                                dark:border-gray-700 // Dark mode border
                                 rounded-lg
                                 text-sm
                                 sm:text-md
-                                bg-surface-light // Updated background
-                                dark:bg-surface-dark // Updated background
-                                text-text-light-primary // Updated text
-                                dark:text-text-dark-secondary // Updated text
+                                bg-gray-50 // Light mode background
+                                dark:bg-ternary-dark // Dark mode background (matching dropdown)
+                                text-gray-800 // Light mode text
+                                dark:text-gray-100 // Dark mode text
                                 "
 							id="name"
 							name="name"

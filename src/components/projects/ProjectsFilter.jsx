@@ -15,15 +15,16 @@ const ProjectsFilter = ({ setSelectProject }) => {
                 sm:px-6
                 py-2
                 border
-                dark:border-surface-dark // Updated border
+                border-gray-200 // Light mode border
+                dark:border-gray-700 // Dark mode border
                 rounded-lg
                 text-sm
                 sm:text-md
                 dark:font-medium
-                bg-surface-light // Updated background
-                dark:bg-surface-dark // Updated background
-                text-text-light-primary // Updated text
-                dark:text-text-dark-secondary // Updated text
+                bg-gray-50 // Light mode background
+                dark:bg-ternary-dark // Dark mode background (using a defined dark color)
+                text-gray-800 // Light mode text
+                dark:text-gray-100 // Dark mode text
             "
 		>
 			<option value={setSelectProject} className="text-sm sm:text-md">
