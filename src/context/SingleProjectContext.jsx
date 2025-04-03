@@ -24,7 +24,8 @@ export const SingleProjectProvider = ({ children }) => {
 				const { data, error } = await supabase
 					.from('projects') // Assuming table name is 'projects'
 					.select('*')
-					.eq('id', projectId) // Filter by id
+					// Convert projectId string from URL to integer for matching int8 column
+					.eq('id', parseInt(projectId, 10)) 
 					.single(); // Expect only one row
 
 				if (error) {
