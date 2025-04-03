@@ -49,12 +49,14 @@ const AppBanner = ({ showHireMeModal }) => {
 						duration: 0.9,
 						delay: 0.3,
 					}}
-					className="flex justify-center sm:block"
+					// Added margin-top to the container div
+					className="flex justify-center sm:block mt-8" 
 				>
           {/* Changed <a> to <span>, added onClick, updated styles and text */}
 					<span
 						onClick={showHireMeModal} // Call modal handler
-						className="text-md font-general-medium bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-md px-5 py-2.5 duration-300 mt-12 mb-6 sm:mb-0 inline-block cursor-pointer" // Mimic header button styles + add margin
+            // Removed mt-12 from button span, adjusted bottom margin
+						className="text-md font-general-medium bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-md px-5 py-2.5 duration-300 mb-6 sm:mb-0 inline-block cursor-pointer" 
 						aria-label="Hire Me Button"
 					>
 						<Button title="Hire Me" /> {/* Use Button component for consistency */}
