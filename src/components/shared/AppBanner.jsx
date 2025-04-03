@@ -30,7 +30,7 @@ const AppBanner = ({ showHireMeModal }) => {
 						duration: 0.9,
 						delay: 0.1,
 					}}
-					className="font-general-semibold text-2xl lg:text-3xl xl:text-4xl text-center sm:text-left text-gray-900 dark:text-white uppercase" // Re-added Tailwind classes
+					className="font-general-semibold text-2xl lg:text-3xl xl:text-4xl text-center sm:text-left text-text-light-secondary dark:text-white uppercase" // Apply explicit light/dark classes
 				>
 					Hi, Iam Stoman
 				</motion.h1>
