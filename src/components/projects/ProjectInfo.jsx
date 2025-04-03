@@ -27,22 +27,22 @@ const ProjectInfo = () => {
 			<div className="w-full sm:w-1/3 text-left">
 				{/* Client details */}
 				<div className="mb-7">
-					<p className="font-general-regular text-2xl font-semibold text-secondary-dark dark:text-secondary-light mb-2">
+					<p className="font-general-regular text-2xl font-semibold text-text-light-secondary dark:text-text-dark-secondary mb-2"> {/* Updated text */}
 						About Client 
 					</p>
 					<ul className="leading-loose">
 						{singleProjectData.client_name && (
-							<li className="font-general-regular text-ternary-dark dark:text-ternary-light">
+							<li className="font-general-regular text-text-light-secondary dark:text-text-dark-secondary"> {/* Updated text */}
 								<span>Name: </span> {singleProjectData.client_name}
 							</li>
 						)}
 						{singleProjectData.client_services && (
-							<li className="font-general-regular text-ternary-dark dark:text-ternary-light">
+							<li className="font-general-regular text-text-light-secondary dark:text-text-dark-secondary"> {/* Updated text */}
 								<span>Services: </span> {singleProjectData.client_services}
 							</li>
 						)}
 						{singleProjectData.client_website && (
-							<li className="font-general-regular text-ternary-dark dark:text-ternary-light">
+							<li className="font-general-regular text-text-light-secondary dark:text-text-dark-secondary"> {/* Updated text */}
 								<span>Website: </span>
 								<a
 									href={singleProjectData.client_website} // Use dynamic link
@@ -62,10 +62,10 @@ const ProjectInfo = () => {
 				{/* Objectives */}
 				{singleProjectData.objective && (
 					<div className="mb-7">
-						<p className="font-general-regular text-2xl font-semibold text-ternary-dark dark:text-ternary-light mb-2">
+						<p className="font-general-regular text-2xl font-semibold text-text-light-secondary dark:text-text-dark-secondary mb-2"> {/* Updated text */}
 							Objective
 						</p>
-						<p className="font-general-regular text-primary-dark dark:text-ternary-light">
+						<p className="font-general-regular text-text-light-primary dark:text-text-dark-secondary"> {/* Updated text */}
 							{singleProjectData.objective}
 						</p>
 					</div>
@@ -74,10 +74,10 @@ const ProjectInfo = () => {
 				{/* Technologies */}
 				{singleProjectData.technologies && singleProjectData.technologies.length > 0 && (
 					<div className="mb-7">
-						<p className="font-general-regular text-2xl font-semibold text-ternary-dark dark:text-ternary-light mb-2">
+						<p className="font-general-regular text-2xl font-semibold text-text-light-secondary dark:text-text-dark-secondary mb-2"> {/* Updated text */}
 							Tools & Technologies
 						</p>
-						<p className="font-general-regular text-primary-dark dark:text-ternary-light">
+						<p className="font-general-regular text-text-light-primary dark:text-text-dark-secondary"> {/* Updated text */}
 							{/* Split the text string into an array, trim whitespace, then join */}
 							{typeof singleProjectData.technologies === 'string' 
 								? singleProjectData.technologies.split(',').map(tech => tech.trim()).join(', ')
@@ -89,7 +89,7 @@ const ProjectInfo = () => {
 				{/* Social sharing - Commented out as it was hardcoded */}
 				{/* 
 				<div>
-					<p className="font-general-regular text-2xl font-semibold text-ternary-dark dark:text-ternary-light mb-2">
+					<p className="font-general-regular text-2xl font-semibold text-text-light-secondary dark:text-text-dark-secondary mb-2"> {/* Updated text */}
 						Share This
 					</p>
 					<div className="flex items-center gap-3 mt-5">
@@ -102,12 +102,12 @@ const ProjectInfo = () => {
 			{/* Right Section: Project Challenge/Details */}
 			{singleProjectData.challenge_details && (
 				<div className="w-full sm:w-2/3 text-left mt-10 sm:mt-0">
-					<p className="font-general-regular text-primary-dark dark:text-primary-light text-2xl font-bold mb-7">
+					<p className="font-general-regular text-text-light-primary dark:text-text-dark-primary text-2xl font-bold mb-7"> {/* Updated text */}
 						Challenge
 					</p>
 					{/* Assuming challenge_details is a single text field. 
 					    If it contains markdown or needs paragraph splitting, adjust rendering here. */}
-					<p className="font-general-regular mb-5 text-lg text-ternary-dark dark:text-ternary-light whitespace-pre-line"> {/* Added whitespace-pre-line to respect newlines */}
+					<p className="font-general-regular mb-5 text-lg text-text-light-secondary dark:text-text-dark-secondary whitespace-pre-line"> {/* Updated text */}
 						{singleProjectData.challenge_details}
 					</p>
 				</div>

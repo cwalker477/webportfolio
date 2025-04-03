@@ -9,9 +9,9 @@ const ContactForm = () => {
 					onSubmit={(e) => {
 						e.preventDefault();
 					}}
-					className="max-w-xl m-4 p-6 sm:p-10 bg-secondary-light dark:bg-secondary-dark rounded-xl shadow-xl text-left"
+					className="max-w-xl m-4 p-6 sm:p-10 bg-surface-light dark:bg-surface-dark rounded-xl shadow-xl text-left" // Updated background
 				>
-					<p className="font-general-medium text-primary-dark dark:text-primary-light text-2xl mb-8">
+					<p className="font-general-medium text-text-light-primary dark:text-text-dark-primary text-2xl mb-8"> {/* Updated text */}
 						Contact Form
 					</p>
 					<FormInput
@@ -44,13 +44,13 @@ const ContactForm = () => {
 
 					<div className="mt-6">
 						<label
-							className="block text-lg text-primary-dark dark:text-primary-light mb-2"
+							className="block text-lg text-text-light-primary dark:text-text-dark-primary mb-2" // Updated text
 							htmlFor="message"
 						>
 							Message
 						</label>
 						<textarea
-							className="w-full px-5 py-2 border border-gray-300 dark:border-primary-dark border-opacity-50 text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md"
+							className="w-full px-5 py-2 border border-gray-300 dark:border-surface-dark border-opacity-50 text-text-light-primary dark:text-text-dark-secondary bg-surface-light dark:bg-surface-dark rounded-md shadow-sm text-md" // Updated border, text, background
 							id="message"
 							name="message"
 							cols="14"

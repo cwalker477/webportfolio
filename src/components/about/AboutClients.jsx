@@ -7,7 +7,7 @@ const AboutClients = () => {
 
 	return (
 		<div className="mt-10 sm:mt-20">
-			<p className="font-general-medium text-2xl sm:text-3xl  text-center text-primary-dark dark:text-primary-light">
+			<p className="font-general-medium text-2xl sm:text-3xl  text-center text-text-light-primary dark:text-text-dark-primary"> {/* Updated text */}
 				{clientsHeading}
 			</p>
 			<div className="grid grid-cols-2 sm:grid-cols-4 mt-10 sm:mt-14 gap-2">

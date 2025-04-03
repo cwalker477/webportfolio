@@ -16,7 +16,7 @@ const ProjectSingle = ({ title, category, image, id }) => {
 		>
       {/* Use dynamic link with id */}
 			<Link to={`/projects/${id}`} aria-label="Single Project"> 
-				<div className="rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-light dark:bg-ternary-dark">
+				<div className="rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-surface-light dark:bg-surface-dark"> {/* Updated background */}
 					<div>
 						<img
 							src={image}
@@ -25,10 +25,10 @@ const ProjectSingle = ({ title, category, image, id }) => {
 						/>
 					</div>
 					<div className="text-center px-4 py-6">
-						<p className="font-general-medium text-lg md:text-xl text-ternary-dark dark:text-ternary-light mb-2">
+						<p className="font-general-medium text-lg md:text-xl text-text-light-secondary dark:text-text-dark-secondary mb-2"> {/* Updated text */}
 							{title}
 						</p>
-						<span className="text-lg text-ternary-dark dark:text-ternary-light">
+						<span className="text-lg text-text-light-secondary dark:text-text-dark-secondary"> {/* Updated text */}
 							{category}
 						</span>
 					</div>

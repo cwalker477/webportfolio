@@ -18,7 +18,7 @@ const ProjectsGrid = () => {
 	return (
 		<section className="py-5 sm:py-10 mt-5 sm:mt-10">
 			<div className="text-center">
-				<p className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light">
+				<p className="font-general-medium text-2xl sm:text-4xl mb-1 text-text-light-secondary dark:text-text-dark-secondary"> {/* Updated text */}
 					Projects portfolio
 				</p>
 			</div>
@@ -26,8 +26,8 @@ const ProjectsGrid = () => {
 			<div className="mt-10 sm:mt-16">
 				<h3
 					className="font-general-regular 
-                        text-center text-secondary-dark
-                        dark:text-ternary-light
+                        text-center text-text-light-secondary // Updated text
+                        dark:text-text-dark-secondary // Updated text
                         text-md
                         sm:text-xl
                         mb-3
@@ -39,8 +39,8 @@ const ProjectsGrid = () => {
 					className="
                         flex
                         justify-between
-                        border-b border-primary-light
-                        dark:border-secondary-dark
+                        border-b border-palette-gray // Updated border
+                        dark:border-surface-dark // Updated border
                         pb-3
                         gap-3
                         "
@@ -50,15 +50,15 @@ const ProjectsGrid = () => {
 							className="
                                 hidden
                                 sm:block
-                                bg-primary-light
-                                dark:bg-ternary-dark
+                                bg-surface-light 
+                                dark:bg-surface-dark 
                                 p-2.5
                                 shadow-sm
                                 rounded-xl
                                 cursor-pointer
                                 "
 						>
-							<FiSearch className="text-ternary-dark dark:text-ternary-light w-5 h-5"></FiSearch>
+							<FiSearch className="text-text-light-secondary dark:text-text-dark-secondary w-5 h-5"></FiSearch> {/* Updated text */}
 						</span>
 						<input
 							onChange={(e) => {
@@ -71,14 +71,14 @@ const ProjectsGrid = () => {
                                 py-2
                                 border 
                             border-gray-200
-                                dark:border-secondary-dark
+                                dark:border-surface-dark // Updated border
                                 rounded-lg
                                 text-sm
                                 sm:text-md
-                                bg-secondary-light
-                                dark:bg-ternary-dark
-                                text-primary-dark
-                                dark:text-ternary-light
+                                bg-surface-light // Updated background
+                                dark:bg-surface-dark // Updated background
+                                text-text-light-primary // Updated text
+                                dark:text-text-dark-secondary // Updated text
                                 "
 							id="name"
 							name="name"

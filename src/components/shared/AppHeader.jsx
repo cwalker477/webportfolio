@@ -59,13 +59,13 @@ const AppHeader = ({ showHireMeModal }) => {
             // Pass the theme to switch TO (the opposite one)
 						onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} 
 						aria-label="Theme Switcher"
-						className="block sm:hidden ml-0 bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer"
+						className="block sm:hidden ml-0 bg-surface-light dark:bg-surface-dark p-3 shadow-sm rounded-xl cursor-pointer" // Kept surface colors
 					>
             {/* Use actual theme state for icon */}
 						{theme === 'dark' ? ( 
-							<FiMoon className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
+							<FiMoon className="text-text-light-secondary hover:text-gray-400 dark:text-text-dark-secondary dark:hover:text-text-dark-primary text-xl" /> // Updated text colors
 						) : (
-							<FiSun className="text-gray-200 hover:text-gray-50 text-xl" />
+							<FiSun className="text-gray-200 hover:text-gray-50 text-xl" /> // Keep light mode icon color for now
 						)}
 					</div>
 
@@ -80,7 +80,7 @@ const AppHeader = ({ showHireMeModal }) => {
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 24 24"
-								className="h-7 w-7 fill-current text-secondary-dark dark:text-ternary-light"
+								className="h-7 w-7 fill-current text-text-light-secondary dark:text-text-dark-secondary" // Updated text colors
 							>
 								{showMenu ? (
 									<FiX className="text-3xl" />
@@ -102,26 +102,26 @@ const AppHeader = ({ showHireMeModal }) => {
 				>
 					<Link
 						to="/projects"
-						className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
+						className="block text-left text-lg text-text-light-primary dark:text-text-dark-secondary hover:text-text-light-secondary dark:hover:text-text-dark-primary  sm:mx-4 mb-2 sm:py-2" // Updated text colors
 						aria-label="Projects"
 					>
 						Projects
 					</Link>
 					<Link
 						to="/about"
-						className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark"
+						className="block text-left text-lg text-text-light-primary dark:text-text-dark-secondary hover:text-text-light-secondary dark:hover:text-text-dark-primary  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-palette-gray dark:border-surface-dark" // Updated text & border colors
 						aria-label="About Me"
 					>
 						About Me
 					</Link>
 					<Link
 						to="/contact"
-						className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark"
+						className="block text-left text-lg text-text-light-primary dark:text-text-dark-secondary hover:text-text-light-secondary dark:hover:text-text-dark-primary  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-palette-gray dark:border-surface-dark" // Updated text & border colors
 						aria-label="Contact"
 					>
 						Contact
 					</Link>
-					<div className="border-t-2 pt-3 sm:pt-0 sm:border-t-0 border-primary-light dark:border-secondary-dark">
+					<div className="border-t-2 pt-3 sm:pt-0 sm:border-t-0 border-palette-gray dark:border-surface-dark"> {/* Updated border colors */}
 						<span
 							onClick={showHireMeModal}
 							className="font-general-medium sm:hidden block text-left text-md bg-accent-orange hover:bg-orange-700 text-white shadow-sm rounded-sm px-4 py-2 mt-2 duration-300 w-24"
@@ -136,21 +136,21 @@ const AppHeader = ({ showHireMeModal }) => {
 				<div className="font-general-medium hidden m-0 sm:ml-4 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none">
 					<Link
 						to="/projects"
-						className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
+						className="block text-left text-lg text-text-light-primary dark:text-text-dark-secondary hover:text-text-light-secondary dark:hover:text-text-dark-primary  sm:mx-4 mb-2 sm:py-2" // Updated text colors
 						aria-label="Projects"
 					>
 						Projects
 					</Link>
 					<Link
 						to="/about"
-						className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
+						className="block text-left text-lg text-text-light-primary dark:text-text-dark-secondary hover:text-text-light-secondary dark:hover:text-text-dark-primary  sm:mx-4 mb-2 sm:py-2" // Updated text colors
 						aria-label="About Me"
 					>
 						About Me
 					</Link>
 					<Link
 						to="/contact"
-						className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
+						className="block text-left text-lg text-text-light-primary dark:text-text-dark-secondary hover:text-text-light-secondary dark:hover:text-text-dark-primary  sm:mx-4 mb-2 sm:py-2" // Updated text colors
 						aria-label="Contact"
 					>
 						Contact
@@ -174,13 +174,13 @@ const AppHeader = ({ showHireMeModal }) => {
             // Pass the theme to switch TO (the opposite one)
 						onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} 
 						aria-label="Theme Switcher"
-						className="ml-8 bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer"
+						className="ml-8 bg-surface-light dark:bg-surface-dark p-3 shadow-sm rounded-xl cursor-pointer" // Kept surface colors
 					>
             {/* Use actual theme state for icon */}
 						{theme === 'dark' ? ( 
-							<FiMoon className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
+							<FiMoon className="text-text-light-secondary hover:text-gray-400 dark:text-text-dark-secondary dark:hover:text-text-dark-primary text-xl" /> // Updated text colors
 						) : (
-							<FiSun className="text-gray-200 hover:text-gray-50 text-xl" />
+							<FiSun className="text-gray-200 hover:text-gray-50 text-xl" /> // Keep light mode icon color for now
 						)}
 					</div>
 				</div>

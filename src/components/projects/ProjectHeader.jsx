@@ -19,19 +19,19 @@ const ProjectSingleHeader = () => {
 	// Adjust property names if your Supabase columns are different
 	return (
 		<div>
-			<p className="font-general-medium text-left text-3xl sm:text-4xl font-bold text-primary-dark dark:text-primary-light mt-14 sm:mt-20 mb-7">
+			<p className="font-general-medium text-left text-3xl sm:text-4xl font-bold text-text-light-primary dark:text-text-dark-primary mt-14 sm:mt-20 mb-7"> {/* Updated text */}
 				{singleProjectData.title || 'Project Title'} {/* Use direct property access */}
 			</p>
 			<div className="flex">
 				<div className="flex items-center mr-10">
-					<FiClock className="text-lg text-ternary-dark dark:text-ternary-light" />
-					<span className="font-general-regular ml-2 leading-none text-primary-dark dark:text-primary-light">
+					<FiClock className="text-lg text-text-light-secondary dark:text-text-dark-secondary" /> {/* Updated text */}
+					<span className="font-general-regular ml-2 leading-none text-text-light-primary dark:text-text-dark-primary"> {/* Updated text */}
 						{singleProjectData.publish_date || 'Publish Date'} {/* Adjust property name if needed */}
 					</span>
 				</div>
 				<div className="flex items-center">
-					<FiTag className="text-lg text-ternary-dark dark:text-ternary-light" />
-					<span className="font-general-regular ml-2 leading-none text-primary-dark dark:text-primary-light">
+					<FiTag className="text-lg text-text-light-secondary dark:text-text-dark-secondary" /> {/* Updated text */}
+					<span className="font-general-regular ml-2 leading-none text-text-light-primary dark:text-text-dark-primary"> {/* Updated text */}
 						{singleProjectData.tags || 'Tags'} {/* Adjust property name if needed */}
 					</span>
 				</div>
