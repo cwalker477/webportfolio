@@ -8,9 +8,10 @@ import logoDark from '../../images/logo-dark.svg';
 import { motion } from 'framer-motion';
 import Button from '../reusable/Button';
 
-const AppHeader = () => {
+// Accept showHireMeModal prop from App.js
+const AppHeader = ({ showHireMeModal }) => { 
 	const [showMenu, setShowMenu] = useState(false);
-	const [showModal, setShowModal] = useState(false);
+	// Removed local modal state: const [showModal, setShowModal] = useState(false);
 	const [activeTheme, setTheme] = useThemeSwitcher();
 
 	function toggleMenu() {
@@ -21,19 +22,7 @@ const AppHeader = () => {
 		}
 	}
 
-	function showHireMeModal() {
-		if (!showModal) {
-			document
-				.getElementsByTagName('html')[0]
-				.classList.add('overflow-y-hidden');
-			setShowModal(true);
-		} else {
-			document
-				.getElementsByTagName('html')[0]
-				.classList.remove('overflow-y-hidden');
-			setShowModal(false);
-		}
-	}
+	// Removed local modal handler function, using prop now
 
 	return (
 		<motion.nav
@@ -190,16 +179,7 @@ const AppHeader = () => {
 					</div>
 				</div>
 			</div>
-			{/* Hire me modal */}
-			<div>
-				{showModal ? (
-					<HireMeModal
-						onClose={showHireMeModal}
-						onRequest={showHireMeModal}
-					/>
-				) : null}
-				{showModal ? showHireMeModal : null}
-			</div>
+			{/* Hire me modal is now rendered in App.js */}
 		</motion.nav>
 	);
 };

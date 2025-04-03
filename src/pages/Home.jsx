@@ -4,10 +4,12 @@ import ProjectsGrid from '../components/projects/ProjectsGrid';
 import { ProjectsProvider } from '../context/ProjectsContext';
 import Button from '../components/reusable/Button';
 
-const Home = () => {
+// Accept showHireMeModal prop from App.js
+const Home = ({ showHireMeModal }) => { 
 	return (
 		<div className="container mx-auto">
-			<AppBanner></AppBanner>
+      {/* Pass prop down to AppBanner */}
+			<AppBanner showHireMeModal={showHireMeModal}></AppBanner> 
 
 			<ProjectsProvider>
 				<ProjectsGrid></ProjectsGrid>
