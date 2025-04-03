@@ -102,21 +102,21 @@ const AppHeader = ({ showHireMeModal }) => {
 				>
 					<Link
 						to="/projects"
-						className="block text-left text-lg text-text-light-primary dark:text-text-dark-secondary hover:text-text-light-secondary dark:hover:text-gray-300 sm:mx-4 mb-2 sm:py-2" // Adjusted dark hover color
+						className="block text-left text-lg text-text-light-primary dark:text-gray-200 hover:text-text-light-secondary dark:hover:text-gray-400 sm:mx-4 mb-2 sm:py-2" // Use standard dark text/hover
 						aria-label="Projects"
 					>
 						Projects
 					</Link>
 					<Link
 						to="/about"
-						className="block text-left text-lg text-text-light-primary dark:text-text-dark-secondary hover:text-text-light-secondary dark:hover:text-gray-300 sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-palette-gray dark:border-surface-dark" // Adjusted dark hover color
+						className="block text-left text-lg text-text-light-primary dark:text-gray-200 hover:text-text-light-secondary dark:hover:text-gray-400 sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-palette-gray dark:border-surface-dark" // Use standard dark text/hover
 						aria-label="About Me"
 					>
 						About Me
 					</Link>
 					<Link
 						to="/contact"
-						className="block text-left text-lg text-text-light-primary dark:text-text-dark-secondary hover:text-text-light-secondary dark:hover:text-gray-300 sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-palette-gray dark:border-surface-dark" // Adjusted dark hover color
+						className="block text-left text-lg text-text-light-primary dark:text-gray-200 hover:text-text-light-secondary dark:hover:text-gray-400 sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-palette-gray dark:border-surface-dark" // Use standard dark text/hover
 						aria-label="Contact"
 					>
 						Contact
@@ -136,21 +136,21 @@ const AppHeader = ({ showHireMeModal }) => {
 				<div className="font-general-medium hidden m-0 sm:ml-4 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none">
 					<Link
 						to="/projects"
-						className="block text-left text-lg text-text-light-primary dark:text-text-dark-secondary hover:text-text-light-secondary dark:hover:text-gray-300 sm:mx-4 mb-2 sm:py-2" // Adjusted dark hover color
+						className="block text-left text-lg text-text-light-primary dark:text-gray-200 hover:text-text-light-secondary dark:hover:text-gray-400 sm:mx-4 mb-2 sm:py-2" // Use standard dark text/hover
 						aria-label="Projects"
 					>
 						Projects
 					</Link>
 					<Link
 						to="/about"
-						className="block text-left text-lg text-text-light-primary dark:text-text-dark-secondary hover:text-text-light-secondary dark:hover:text-gray-300 sm:mx-4 mb-2 sm:py-2" // Adjusted dark hover color
+						className="block text-left text-lg text-text-light-primary dark:text-gray-200 hover:text-text-light-secondary dark:hover:text-gray-400 sm:mx-4 mb-2 sm:py-2" // Use standard dark text/hover
 						aria-label="About Me"
 					>
 						About Me
 					</Link>
 					<Link
 						to="/contact"
-						className="block text-left text-lg text-text-light-primary dark:text-text-dark-secondary hover:text-text-light-secondary dark:hover:text-gray-300 sm:mx-4 mb-2 sm:py-2" // Adjusted dark hover color
+						className="block text-left text-lg text-text-light-primary dark:text-gray-200 hover:text-text-light-secondary dark:hover:text-gray-400 sm:mx-4 mb-2 sm:py-2" // Use standard dark text/hover
 						aria-label="Contact"
 					>
 						Contact

@@ -18,7 +18,7 @@ const ProjectsGrid = () => {
 	return (
 		<section className="py-5 sm:py-10 mt-5 sm:mt-10">
 			<div className="text-center">
-				<p className="font-general-medium text-2xl sm:text-4xl mb-1 text-gray-500 dark:text-gray-300"> {/* Use standard Tailwind text colors */}
+				<p className="font-general-medium text-2xl sm:text-4xl mb-1 text-gray-500 dark:text-gray-200"> {/* Adjusted dark text color */}
 					Projects portfolio
 				</p>
 			</div>
@@ -26,8 +26,8 @@ const ProjectsGrid = () => {
 			<div className="mt-10 sm:mt-16">
 				<h3
 					className="font-general-regular 
-                        text-center text-gray-500 // Use standard Tailwind text colors
-                        dark:text-gray-300 // Use standard Tailwind text colors
+                        text-center text-gray-500 // Light mode text color
+                        dark:text-gray-400 // Adjusted dark text color
                         text-md
                         sm:text-xl
                         mb-3
