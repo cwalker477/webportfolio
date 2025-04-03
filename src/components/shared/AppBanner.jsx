@@ -21,7 +21,7 @@ const AppBanner = ({ showHireMeModal }) => {
 			transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.2 }}
 			className="flex flex-col sm:justify-between items-center sm:flex-row mt-12 md:mt-2"
 		>
-			<div className="w-full md:w-1/3 text-left">
+			<div className="w-full md:w-1/3 text-left"> {/* Removed dark:text-white from parent */}
 				<motion.h1
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
@@ -30,7 +30,7 @@ const AppBanner = ({ showHireMeModal }) => {
 						duration: 0.9,
 						delay: 0.1,
 					}}
-					className="font-general-semibold text-2xl lg:text-3xl xl:text-4xl text-center sm:text-left uppercase" // Removed text-gray-900
+					className="font-general-semibold text-2xl lg:text-3xl xl:text-4xl text-center sm:text-left text-gray-900 dark:text-white uppercase" // Added back text-gray-900 and dark:text-white
 				>
 					Hi, Iam Stoman
 				</motion.h1>
