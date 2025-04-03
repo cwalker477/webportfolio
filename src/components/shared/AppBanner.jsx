@@ -30,8 +30,7 @@ const AppBanner = ({ showHireMeModal }) => {
 						duration: 0.9,
 						delay: 0.1,
 					}}
-					className="font-general-semibold text-2xl lg:text-3xl xl:text-4xl text-center sm:text-left uppercase" // Removed text color classes
-					style={{ color: theme === 'dark' ? '#FFFFFF' : '#111827' }} // Apply color via inline style
+					className="font-general-semibold text-2xl lg:text-3xl xl:text-4xl text-center sm:text-left text-gray-900 dark:text-white uppercase" // Re-added Tailwind classes
 				>
 					Hi, Iam Stoman
 				</motion.h1>
