@@ -48,7 +48,7 @@ const ProjectInfo = () => {
 									href={singleProjectData.client_website} // Use dynamic link
 									target="_blank" // Add target blank
 									rel="noopener noreferrer" // Add rel for security
-									className='hover:underline hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer duration-300'
+									className='hover:underline hover:text-accent-orange dark:hover:text-orange-300 cursor-pointer duration-300' // Using accent-orange and a lighter orange for dark hover
 									aria-label="Project Website"
 								>
 									{singleProjectData.client_website}

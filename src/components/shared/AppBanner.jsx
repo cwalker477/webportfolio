@@ -61,7 +61,7 @@ const AppBanner = ({ showHireMeModal }) => {
 					<span
 						onClick={showHireMeModal} // Call modal handler
             // Removed mt-12 from button span, adjusted bottom margin
-						className="text-md font-general-medium bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-md px-5 py-2.5 duration-300 mb-6 sm:mb-0 inline-block cursor-pointer" 
+						className="text-md font-general-medium bg-accent-orange hover:bg-orange-700 text-white shadow-sm rounded-md px-5 py-2.5 duration-300 mb-6 sm:mb-0 inline-block cursor-pointer" 
 						aria-label="Hire Me Button"
 					>
 						<Button title="Hire Me" /> {/* Use Button component for consistency */}
