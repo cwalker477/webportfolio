@@ -15,11 +15,17 @@ const ProjectGallery = () => {
 		return null; 
 	}
 
-	// Assuming Supabase column for gallery images is 'detail_images' (an array of text URLs)
-	// Adjust 'detail_images' if your column name is different
-	const images = singleProjectData.detail_images;
+	// Assuming Supabase column for gallery images is 'detail_images'
+	// It might be an array (jsonb, text[]) or a comma-separated string (text)
+	let images = singleProjectData.detail_images;
 
-	if (!images || images.length === 0) {
+	// If it's a string, try splitting it into an array
+	if (typeof images === 'string' && images.trim() !== '') {
+		images = images.split(',').map(url => url.trim());
+	}
+
+	// Ensure images is an array before trying to map
+	if (!Array.isArray(images) || images.length === 0) {
 		return <div className="mt-12">No project images available.</div>;
 	}
 

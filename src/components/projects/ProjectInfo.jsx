@@ -78,7 +78,10 @@ const ProjectInfo = () => {
 							Tools & Technologies
 						</p>
 						<p className="font-general-regular text-primary-dark dark:text-ternary-light">
-							{singleProjectData.technologies.join(', ')}
+							{/* Split the text string into an array, trim whitespace, then join */}
+							{typeof singleProjectData.technologies === 'string' 
+								? singleProjectData.technologies.split(',').map(tech => tech.trim()).join(', ')
+								: ''}
 						</p>
 					</div>
 				)}
