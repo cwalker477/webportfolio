@@ -12,7 +12,8 @@ import Button from '../reusable/Button';
 const AppHeader = ({ showHireMeModal }) => { 
 	const [showMenu, setShowMenu] = useState(false);
 	// Removed local modal state: const [showModal, setShowModal] = useState(false);
-	const [activeTheme, setTheme] = useThemeSwitcher();
+  // Destructure theme state and setter from hook
+	const [theme, setTheme] = useThemeSwitcher(); 
 
 	function toggleMenu() {
 		if (!showMenu) {
@@ -36,7 +37,8 @@ const AppHeader = ({ showHireMeModal }) => {
 				<div className="flex justify-between items-center px-4 sm:px-0">
 					<div>
 						<Link to="/">
-							{activeTheme === 'dark' ? (
+              {/* Use actual theme state for logo */}
+							{theme === 'dark' ? ( 
 								<img
 									src={logoDark}
 									className="w-36"
@@ -54,11 +56,13 @@ const AppHeader = ({ showHireMeModal }) => {
 
 					{/* Theme switcher small screen */}
 					<div
-						onClick={() => setTheme(activeTheme)}
+            // Pass the theme to switch TO (the opposite one)
+						onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} 
 						aria-label="Theme Switcher"
 						className="block sm:hidden ml-0 bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer"
 					>
-						{activeTheme === 'dark' ? (
+            {/* Use actual theme state for icon */}
+						{theme === 'dark' ? ( 
 							<FiMoon className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
 						) : (
 							<FiSun className="text-gray-200 hover:text-gray-50 text-xl" />
@@ -167,11 +171,13 @@ const AppHeader = ({ showHireMeModal }) => {
 
 					{/* Theme switcher large screen */}
 					<div
-						onClick={() => setTheme(activeTheme)}
+            // Pass the theme to switch TO (the opposite one)
+						onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} 
 						aria-label="Theme Switcher"
 						className="ml-8 bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer"
 					>
-						{activeTheme === 'dark' ? (
+            {/* Use actual theme state for icon */}
+						{theme === 'dark' ? ( 
 							<FiMoon className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
 						) : (
 							<FiSun className="text-gray-200 hover:text-gray-50 text-xl" />

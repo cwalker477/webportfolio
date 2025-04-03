@@ -12,7 +12,8 @@ const useThemeSwitcher = () => {
 		localStorage.setItem('theme', theme);
 	}, [theme, activeTheme]);
 
-	return [activeTheme, setTheme];
+  // Return the actual current theme state, not the calculated 'activeTheme'
+	return [theme, setTheme]; 
 };
 
 export default useThemeSwitcher;

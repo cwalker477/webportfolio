@@ -11,7 +11,8 @@ import animationDataDark from '../../images/Animation_dark_1743641712181.json';
 
 // Accept showHireMeModal prop
 const AppBanner = ({ showHireMeModal }) => { 
-	const [activeTheme] = useThemeSwitcher();
+  // Destructure the actual theme state returned by the hook
+	const [theme] = useThemeSwitcher(); 
 
 	return (
 		<motion.section
@@ -73,9 +74,9 @@ const AppBanner = ({ showHireMeModal }) => {
 				transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.2 }}
 				className="w-full sm:w-2/3 text-right float-right mt-8 sm:mt-0"
 			>
-        {/* Conditionally render Lottie component based on theme */}
+        {/* Conditionally render Lottie component based on the actual theme state */}
 				<Lottie 
-					animationData={activeTheme === 'dark' ? animationDataDark : animationDataLight} 
+					animationData={theme === 'dark' ? animationDataDark : animationDataLight} 
 					loop={true} 
 				/> 
 			</motion.div>
