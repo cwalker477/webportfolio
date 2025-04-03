@@ -19,10 +19,11 @@ const useThemeSwitcher = () => {
 	useEffect(() => {
 		if (typeof window !== 'undefined') { // Ensure document is available
       const root = window.document.documentElement;
-      const oldTheme = theme === 'dark' ? 'light' : 'dark'; // Calculate the opposite theme
-
-      root.classList.remove(oldTheme);
+      
+      // Explicitly remove both classes then add the correct one
+      root.classList.remove('light', 'dark'); 
       root.classList.add(theme);
+      
       localStorage.setItem('theme', theme);
     }
     // Only depend on 'theme' itself
