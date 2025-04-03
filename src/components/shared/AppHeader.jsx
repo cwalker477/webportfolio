@@ -37,16 +37,16 @@ const AppHeader = ({ showHireMeModal }) => {
 				<div className="flex justify-between items-center px-4 sm:px-0">
 					<div>
 						<Link to="/">
-              {/* Use actual theme state for logo */}
-							{theme === 'dark' ? ( 
+              {/* Reversed condition to show light logo on dark theme and vice-versa */}
+							{theme === 'dark' ? (
 								<img
-									src={logoDark}
+									src={logoLight}
 									className="w-36"
-									alt="Dark Logo"
+									alt="Light Logo" // Corrected alt text
 								/>
 							) : (
 								<img
-									src={logoLight}
+									src={logoDark}
 									className="w-36"
 									alt="Dark Logo"
 								/>
@@ -63,9 +63,9 @@ const AppHeader = ({ showHireMeModal }) => {
 					>
             {/* Use actual theme state for icon */}
 						{theme === 'dark' ? ( 
-							<FiMoon className="text-text-light-secondary hover:text-gray-400 dark:text-text-dark-secondary dark:hover:text-gray-300 text-xl" /> // Adjusted dark hover color
+							<FiMoon className="text-text-light-secondary hover:text-gray-400 dark:text-text-dark-secondary dark:hover:text-primary-light text-xl" /> // Restore original dark hover color
 						) : (
-							<FiSun className="text-gray-600 hover:text-gray-900 text-xl" /> // Adjusted light mode icon colors
+							<FiSun className="text-gray-200 hover:text-gray-50 text-xl" /> // Restore original light mode icon colors
 						)}
 					</div>
 
@@ -102,21 +102,21 @@ const AppHeader = ({ showHireMeModal }) => {
 				>
 					<Link
 						to="/projects"
-						className="block text-left text-lg text-text-light-primary dark:text-gray-200 hover:text-text-light-secondary dark:hover:text-gray-400 sm:mx-4 mb-2 sm:py-2" // Use standard dark text/hover
+						className="block text-left text-lg text-text-light-primary dark:text-text-dark-secondary hover:text-text-light-secondary dark:hover:text-primary-light sm:mx-4 mb-2 sm:py-2" // Restore original dark text/hover
 						aria-label="Projects"
 					>
 						Projects
 					</Link>
 					<Link
 						to="/about"
-						className="block text-left text-lg text-text-light-primary dark:text-gray-200 hover:text-text-light-secondary dark:hover:text-gray-400 sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-palette-gray dark:border-surface-dark" // Use standard dark text/hover
+						className="block text-left text-lg text-text-light-primary dark:text-text-dark-secondary hover:text-text-light-secondary dark:hover:text-primary-light sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-palette-gray dark:border-surface-dark" // Restore original dark text/hover
 						aria-label="About Me"
 					>
 						About Me
 					</Link>
 					<Link
 						to="/contact"
-						className="block text-left text-lg text-text-light-primary dark:text-gray-200 hover:text-text-light-secondary dark:hover:text-gray-400 sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-palette-gray dark:border-surface-dark" // Use standard dark text/hover
+						className="block text-left text-lg text-text-light-primary dark:text-text-dark-secondary hover:text-text-light-secondary dark:hover:text-primary-light sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-palette-gray dark:border-surface-dark" // Restore original dark text/hover
 						aria-label="Contact"
 					>
 						Contact
@@ -136,21 +136,21 @@ const AppHeader = ({ showHireMeModal }) => {
 				<div className="font-general-medium hidden m-0 sm:ml-4 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none">
 					<Link
 						to="/projects"
-						className="block text-left text-lg text-text-light-primary dark:text-gray-200 hover:text-text-light-secondary dark:hover:text-gray-400 sm:mx-4 mb-2 sm:py-2" // Use standard dark text/hover
+						className="block text-left text-lg text-text-light-primary dark:text-text-dark-secondary hover:text-text-light-secondary dark:hover:text-primary-light sm:mx-4 mb-2 sm:py-2" // Restore original dark text/hover
 						aria-label="Projects"
 					>
 						Projects
 					</Link>
 					<Link
 						to="/about"
-						className="block text-left text-lg text-text-light-primary dark:text-gray-200 hover:text-text-light-secondary dark:hover:text-gray-400 sm:mx-4 mb-2 sm:py-2" // Use standard dark text/hover
+						className="block text-left text-lg text-text-light-primary dark:text-text-dark-secondary hover:text-text-light-secondary dark:hover:text-primary-light sm:mx-4 mb-2 sm:py-2" // Restore original dark text/hover
 						aria-label="About Me"
 					>
 						About Me
 					</Link>
 					<Link
 						to="/contact"
-						className="block text-left text-lg text-text-light-primary dark:text-gray-200 hover:text-text-light-secondary dark:hover:text-gray-400 sm:mx-4 mb-2 sm:py-2" // Use standard dark text/hover
+						className="block text-left text-lg text-text-light-primary dark:text-text-dark-secondary hover:text-text-light-secondary dark:hover:text-primary-light sm:mx-4 mb-2 sm:py-2" // Restore original dark text/hover
 						aria-label="Contact"
 					>
 						Contact
@@ -178,9 +178,9 @@ const AppHeader = ({ showHireMeModal }) => {
 					>
             {/* Use actual theme state for icon */}
 						{theme === 'dark' ? ( 
-							<FiMoon className="text-text-light-secondary hover:text-gray-400 dark:text-text-dark-secondary dark:hover:text-gray-300 text-xl" /> // Adjusted dark hover color
+							<FiMoon className="text-text-light-secondary hover:text-gray-400 dark:text-text-dark-secondary dark:hover:text-primary-light text-xl" /> // Restore original dark hover color
 						) : (
-							<FiSun className="text-gray-600 hover:text-gray-900 text-xl" /> // Adjusted light mode icon colors
+							<FiSun className="text-gray-200 hover:text-gray-50 text-xl" /> // Restore original light mode icon colors
 						)}
 					</div>
 				</div>
