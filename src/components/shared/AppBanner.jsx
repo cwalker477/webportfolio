@@ -5,8 +5,9 @@ import useThemeSwitcher from '../../hooks/useThemeSwitcher';
 import { motion } from 'framer-motion';
 import Button from '../reusable/Button'; // Import Button component
 import Lottie from 'lottie-react'; // Import Lottie
-// Corrected import path for animation data
-import animationData from '../../images/Animation_1743641712181.json'; 
+// Import both light and dark animation data
+import animationDataLight from '../../images/Animation_1743641712181.json'; 
+import animationDataDark from '../../images/Animation_dark_1743641712181.json'; 
 
 // Accept showHireMeModal prop
 const AppBanner = ({ showHireMeModal }) => { 
@@ -72,8 +73,11 @@ const AppBanner = ({ showHireMeModal }) => {
 				transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.2 }}
 				className="w-full sm:w-2/3 text-right float-right mt-8 sm:mt-0"
 			>
-        {/* Replace img with Lottie component */}
-				<Lottie animationData={animationData} loop={true} /> 
+        {/* Conditionally render Lottie component based on theme */}
+				<Lottie 
+					animationData={activeTheme === 'dark' ? animationDataDark : animationDataLight} 
+					loop={true} 
+				/> 
 			</motion.div>
 		</motion.section>
 	);
