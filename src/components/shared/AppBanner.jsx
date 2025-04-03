@@ -30,7 +30,8 @@ const AppBanner = ({ showHireMeModal }) => {
 						duration: 0.9,
 						delay: 0.1,
 					}}
-					className="font-general-semibold text-2xl lg:text-3xl xl:text-4xl text-center sm:text-left text-text-light-secondary dark:text-white uppercase" // Revert to original classes
+					className="font-general-semibold text-2xl lg:text-3xl xl:text-4xl text-center sm:text-left uppercase" // Removed text color classes
+					style={{ color: theme === 'dark' ? '#FFFFFF' : '#14213D' }} // Apply color via inline style
 				>
 					Hi, Iam Stoman
 				</motion.h1>
@@ -42,7 +43,8 @@ const AppBanner = ({ showHireMeModal }) => {
 						duration: 0.9,
 						delay: 0.2,
 					}}
-					className="font-general-medium mt-4 text-lg md:text-xl lg:text-2xl xl:text-3xl text-center sm:text-left leading-normal text-text-light-secondary dark:text-gray-300" // Use standard gray-300 for dark mode subheading
+					className="font-general-medium mt-4 text-lg md:text-xl lg:text-2xl xl:text-3xl text-center sm:text-left leading-normal" // Removed text color classes
+					style={{ color: theme === 'dark' ? '#D1D5DB' : '#14213D' }} // Apply color via inline style (gray-300 for dark)
 				>
 					A Full-Stack Developer & Design Enthusiast
 				</motion.p>
