@@ -22,9 +22,9 @@ const ProjectsFilter = ({ setSelectProject }) => {
                 sm:text-md
                 dark:font-medium
                 bg-gray-50 // Light mode background
-                dark:bg-ternary-dark // Dark mode background (using a defined dark color)
+                dark:bg-surface-dark // Use defined surface color for dark background
                 text-gray-800 // Light mode text
-                dark:text-gray-100 // Dark mode text
+                dark:text-text-dark-primary // Use defined primary text color for dark mode
             "
 		>
 			<option value={setSelectProject} className="text-sm sm:text-md">

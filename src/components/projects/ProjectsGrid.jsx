@@ -76,9 +76,9 @@ const ProjectsGrid = () => {
                                 text-sm
                                 sm:text-md
                                 bg-gray-50 // Light mode background
-                                dark:bg-ternary-dark // Dark mode background (matching dropdown)
+                                dark:bg-surface-dark // Use defined surface color for dark background
                                 text-gray-800 // Light mode text
-                                dark:text-gray-100 // Dark mode text
+                                dark:text-text-dark-primary // Use defined primary text color for dark mode
                                 "
 							id="name"
 							name="name"
