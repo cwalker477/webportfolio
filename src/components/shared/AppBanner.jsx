@@ -75,7 +75,9 @@ const AppBanner = ({ showHireMeModal }) => {
 				className="w-full sm:w-2/3 text-right float-right mt-8 sm:mt-0"
 			>
         {/* Conditionally render Lottie component based on the actual theme state */}
+        {/* Added key={theme} to force re-render on theme change */}
 				<Lottie 
+					key={theme} 
 					animationData={theme === 'dark' ? animationDataDark : animationDataLight} 
 					loop={true} 
 				/> 
