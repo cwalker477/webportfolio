@@ -9,6 +9,7 @@ export const ProjectsProvider = (props) => {
 	const [projects, setProjects] = useState([]); // Initialize with empty array
 	const [searchProject, setSearchProject] = useState('');
 	const [selectProject, setSelectProject] = useState('');
+	const [projectCategories, setProjectCategories] = useState([]); // State for unique categories
 
 	// Fetch projects from Supabase on mount
 	useEffect(() => {
@@ -23,9 +24,12 @@ export const ProjectsProvider = (props) => {
 					// Handle error appropriately, maybe set an error state
 				} else if (data) {
 					setProjects(data);
+					// Calculate unique categories after fetching
+					const uniqueCategories = [...new Set(data.map(project => project.category))].filter(Boolean); // Filter out null/empty categories
+					setProjectCategories(uniqueCategories);
 				}
 			} catch (error) {
-				console.error('Error in fetchProjects:', error);
+				console.error('Error fetching projects:', error);
 			}
 		};
 
@@ -62,6 +66,7 @@ export const ProjectsProvider = (props) => {
 				selectProject,
 				setSelectProject,
 				selectProjectsByCategory,
+				projectCategories, // Provide categories
 			}}
 		>
 			{props.children}

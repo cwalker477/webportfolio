@@ -1,11 +1,10 @@
-const selectOptions = [
-	'Web Application',
-	'Mobile Application',
-	'UI/UX Design',
-	'Branding',
-];
+import { useContext } from 'react'; // Import useContext
+import { ProjectsContext } from '../../context/ProjectsContext'; // Import the context
 
 const ProjectsFilter = ({ setSelectProject }) => {
+	// Consume the context to get dynamic categories
+	const { projectCategories } = useContext(ProjectsContext); 
+
 	return (
 		<select
 			onChange={(e) => {
@@ -31,9 +30,10 @@ const ProjectsFilter = ({ setSelectProject }) => {
 				All Projects
 			</option>
 
-			{selectOptions.map((option) => (
-				<option className="text-normal sm:text-md" key={option}>
-					{option}
+			{/* Map over dynamic categories from context */}
+			{projectCategories.map((category) => (
+				<option className="text-normal sm:text-md" key={category}>
+					{category}
 				</option>
 			))}
 		</select>
