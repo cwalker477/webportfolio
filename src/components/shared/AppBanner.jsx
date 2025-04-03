@@ -14,8 +14,6 @@ const AppBanner = ({ showHireMeModal }) => {
   // Destructure the actual theme state returned by the hook
 	const [theme] = useThemeSwitcher(); 
 
-  console.log('AppBanner theme:', theme); // Add console log for debugging
-
 	return (
 		<motion.section
 			initial={{ opacity: 0 }}
