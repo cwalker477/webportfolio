@@ -1,15 +1,19 @@
 import { useEffect, useState } from 'react';
 
 const useThemeSwitcher = () => {
-  // Use functional initializer to read localStorage only once
-  // Also check system preference as a fallback
+  // Refined functional initializer
 	const [theme, setTheme] = useState(() => {
-    if (typeof window !== 'undefined') { // Ensure localStorage is available
-      const storedTheme = localStorage.theme;
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      return storedTheme || (prefersDark ? 'dark' : 'light');
+    if (typeof window === 'undefined') {
+      return 'light'; // Default for SSR/build
     }
-    return 'light'; // Default if window is not available (SSR/build)
+    const storedTheme = localStorage.theme;
+    // Check if stored theme is valid, otherwise check system preference
+    if (storedTheme === 'light' || storedTheme === 'dark') {
+      return storedTheme;
+    } else {
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      return prefersDark ? 'dark' : 'light';
+    }
   });
 
 	useEffect(() => {
